@@ -1,0 +1,87 @@
+<section class="mt-5 mb-5 mx-auto">
+
+    <p class="h3">CRUD de usuarios</p>
+
+    <div class="list-group w-25">
+        <a class="list-group-item list-group-item-action bg-primary text-light" href="/user/create">criar usuario</a>
+        <a class="list-group-item list-group-item-action bg-primary text-light  mt-2" href="/user/list">listar usuario</a>
+    </div>
+
+    <h1>O que é MVC?</h1>
+
+    <p class="text-justify">
+        MVC é um
+        padrão
+        de arquitetura de software responsável por contribuir na otimização da velocidade entre as requisições feitas
+        pelo
+        comando dos usuários.
+
+        Com quase 50 anos de formulação, a arquitetura MVC é dividida em três componentes essenciais: Model, Controller
+        e
+        View.
+
+        Um dúvida muito recorrente na programação é se no processo de desenvolvimento pode ter apenas esses 3
+        componentes ou
+        se é possível acrescentar mais alguns. A resposta é sim para a possibilidade de inserir uma camada extra. Essa
+        sequência de códigos pode ser alterada conforme a necessidade do projeto.
+
+        Mas um código com muitas camadas se torna muito confuso e por isso, o ideal é manter o padrão original. A seguir
+        vamos explicar os conceitos e aplicações dos componentes que acompanham essa arquitetura de software.
+    </p>
+
+    <div class="mx-auto" style="width: max-content;">
+        <img src="/public/img/mvc.png" class="img-fluid mx-auto mt-3 mb-3">
+    </div>
+
+    <h2> Model ou Modelo </h2>
+
+    <p class="text-justify">
+        Essa classe também é conhecida como Business Object Model (objeto modelo de negócio). Sua responsabilidade é
+        gerenciar e
+        controlar a forma como os dados se comportam por meio das funções, lógica e regras de negócios estabelecidas.
+
+        Ele é o detentor dos dados que recebe as informações do Controller, válida se ela está correta ou não e envia a
+        resposta
+        mais adequada.
+    </p>
+
+
+    <h2> Controller ou Controlador </h2>
+    <p class="text-justify">
+        A camada de controle é responsável por intermediar as requisições enviadas pelo View com as respostas fornecidas
+        pelo
+        Model, processando os dados que o usuário informou e repassando para outras camadas.
+
+        Numa analogia bem simplista, o controller operaria como o ‘’maestro de uma orquestra’’ que permite a comunicação
+        entre o
+        detentor dos dados e a pessoa com vários questionamentos no MVC.
+    </p>
+
+    <h2>View ou Visão</h2>
+
+    <p class="text-justify">
+        Essa camada é responsável por apresentar as informações de forma visual ao usuário. Em seu desenvolvimento devem
+        ser
+        aplicados apenas recursos ligados a aparência como mensagens, botões ou telas.
+
+        Seguindo nosso processo de comparação o View está na linha de frente da comunicação com usuário e é responsável
+        transmitir questionamentos ao controller e entregar as respostas obtidas ao usuário. É a parte da interface que
+        se
+        comunica, disponibilizando e capturando todas as informação do usuário.
+
+    </p>
+
+    <h2>Como os componentes interagem?</h2>
+    <p class="text-justify">
+        Tudo começa com a interação do usuário na camada View. A partir daí o controlador pega essa informações e envia
+        para
+        o Model que fica responsável por avaliar aqueles dados e transmitir uma resposta.
+
+        O controlador recebe essas respostas e envia uma notificação de validação daquela informação para a camada
+        visão,
+        fazendo com a mesma apresente o resultado de maneira gráfica e visual.
+
+        Todo esse processo leva em consideração as regras de negócio aplicadas na construção de todo projeto.
+    </p>
+
+</section>
