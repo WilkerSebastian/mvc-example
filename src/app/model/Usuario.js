@@ -17,9 +17,21 @@ export default class Usuario {
 
         this.nome = json.nome
         this.email = json.email
-        this.cpf = json.cpf
+        this.cpf = this.adjustmentCPF(json.cpf)
         this.data_nascimento = json.data_nascimento
         this.senha = this.encryptar(json.senha)
+
+    }
+
+    adjustmentCPF(cpf) {
+
+        if (cpf.length < 14) {
+
+            return `${cpf.slice(0 , 3)}.${cpf.slice(3 , 6)}.${cpf.slice(6 , 9)}-${cpf.slice(9 , 11)}`
+            
+        }
+
+        return cpf
 
     }
 

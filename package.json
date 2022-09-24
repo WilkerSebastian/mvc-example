@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon ./src/index.js",
+    "table": "node ./src/app/config/table.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

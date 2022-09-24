@@ -1,0 +1,13 @@
+main {
+
+    min-height: 720px;
+
+}
+
+header {
+
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+
+}

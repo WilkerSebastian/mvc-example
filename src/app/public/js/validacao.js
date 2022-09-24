@@ -17,9 +17,14 @@ class CPF {
     }
     validaBoolean(cpf) {
 
-        return this.valida(cpf) == "CPF Válido" 
+        return this.valida(cpf) == "CPF Válido"
 
     }
+}
+
+function validarEmail(email) {
+    const emailPattern = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+    return emailPattern.test(email);
 }
 
 function validar() {
@@ -34,20 +39,44 @@ function validar() {
         $("#data_nascimento"),
         $("#senha")
 
-    ] 
+    ]
 
     campos.forEach((elemento) => {
 
-        valido = elemento.val().trim() != ""
+        if (elemento.val().trim() == "") {
 
-        valido = elemento.attr("name") == "cpf" ? new CPF().validaBoolean(elemento.val()) : valido
+            valido = false
+            elemento.css("border", "1px solid red")
 
-        console.groupCollapsed(valido);
+        } else {
 
-        elemento.css("border" , valido ? "none" : "1px solid red")
-        
+            elemento.css("border", "none")
+
+        }
 
     })
+
+    if(!validarEmail(campos[1].val())) {
+
+        valido = false
+        campos[1].css("border", "1px solid red")
+
+    } else {
+
+        campos[1].css("border", "none")
+
+    }
+
+    if(!new CPF().validaBoolean(campos[2].val())) {
+
+        valido = false
+        campos[2].css("border", "1px solid red")
+
+    } else {
+
+        campos[2].css("border", "none")
+
+    }
 
     return valido
 

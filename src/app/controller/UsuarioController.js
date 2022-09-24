@@ -1,5 +1,5 @@
 import Usuario from "../model/Usuario.js";
-import db from "../config/config.js"
+import db from "../config/database.js"
 import nodemailer from "nodemailer"
 import { Base64 } from "js-base64";
 
@@ -70,6 +70,51 @@ class UsuarioController {
                 res.render("lista")
 
             })
+
+    }
+
+    edit(req , res) {
+
+        const id = Number(Base64.decode(req.params.id))
+
+        db.query(`SELECT nome, email, cpf, to_char(data_nascimento , 'yyyy-MM-dd') as data_nascimento FROM usuario WHERE id = ${id};`)
+        .then((array) => {
+
+            const usuario = array.rows[0]
+
+            res.render("editar" , {usuario , id:req.params.id})
+
+        })
+        .catch((err) => {
+
+            console.log("erro select editar " + err);
+            res.redirect("/user/list")
+
+        })
+
+    }
+
+    editar(req , res) {
+
+        const id = Number(Base64.decode(req.params.id))
+
+        let user = new Usuario()
+        user.parse(req.body)        
+        
+        db.query(`UPDATE usuario
+        SET nome='${user.nome}', email='${user.email}', cpf='${user.cpf}', data_nascimento='${user.data_nascimento}', senha='${user.senha}'
+        WHERE id = ${id};`)
+        .then(() => {
+
+            res.redirect("/user/list")
+
+        })
+        .catch((err) => {
+
+            console.log("erro no update " + err);
+            res.redirect(`/user/edit/${req.params.id}`)
+
+        })
 
     }
 

@@ -1,0 +1,27 @@
+<h1 class="text-center mt-3">Edição Usuario</h1>
+
+<form action="/user/editar/<%= id %> " method="post" onsubmit="return validar()" class="w-50 mx-auto">
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" name="nome" id="nome" value="<%= usuario.nome %>">
+    </div>
+    <div class="mb-3"> 
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" id="email" value="<%= usuario.email %>">
+    </div>
+    <div class="mb-3">
+        <label for="cpf" class="form-label">CPF</label>
+        <input type="text" class="form-control" name="cpf" id="cpf" value="<%= usuario.cpf %>">
+    </div>
+    <div class="mb-3">
+        <label for="data_nascimento" class="form-label">Data Nascimento</label>
+        <input type="date" class="form-control" name="data_nascimento" id="data_nascimento" value="<%= usuario.data_nascimento %>">
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" class="form-control" name="senha" id="senha">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script src="/public/js/validacao.js"></script>
