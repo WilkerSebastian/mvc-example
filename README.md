@@ -2,12 +2,23 @@
 
 Esse repositório tem como foco criar um back-end com padrão MVC
 
-MVC é um padrão de arquitetura de software responsável por contribuir na otimização da velocidade entre as requisições feitas       pelo comando dos usuários.
-Com quase 50 anos de formulação, a arquitetura MVC é dividida em três componentes essenciais: Model, Controller e View.
+O MVC é um padrão de arquitetura de software. O MVC sugere uma maneira para você pensar na divisão de responsabilidades, principalmente dentro de um software web.
 
-Um dúvida muito recorrente na programação é se no processo de desenvolvimento pode ter apenas esses 3 componentes ou
-se é possível acrescentar mais alguns. A resposta é sim para a possibilidade de inserir uma camada extra. Essa
-sequência de códigos pode ser alterada conforme a necessidade do projeto.
+O princípio básico do MVC é a divisão da aplicação em três camadas: a camada de interação do usuário (view), a camada de manipulação dos dados (model) e a camada de controle (controller).
 
-Mas um código com muitas camadas se torna muito confuso e por isso, o ideal é manter o padrão original. A seguir
-vamos explicar os conceitos e aplicações dos componentes que acompanham essa arquitetura de software.
+Com o MVC, é possível separar o código relativo à interface do usuário das regras de negócio, o que sem dúvida traz muitas vantagens que veremos mais à frente.
+
+<h2>Scripts</h2>
+
+<h3>npm i</h3>
+para instalar as dependências do projeto
+
+<h3>npm run table</h3>
+para criar as tabelas que serão usadas no projeto
+
+
+<h3>npm run dev</h3>
+para executar o index.js do projeto através do nodemon
+
+<h3>npm run start</h3>
+para executar o index.js do projeto através do node

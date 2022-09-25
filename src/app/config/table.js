@@ -1,7 +1,8 @@
-import db from "./database.js";
+import db from "./database.js"; // importa a pool de banco de dados
 
 console.log("criando tabela...");
 
+// executa script de criação de tabela
 db.query(`
 
 CREATE TABLE IF NOT EXISTS public.usuario

@@ -1,3 +1,4 @@
+// a classe que tem os métodos para validamos um CPF
 class CPF {
     constructor() {
         "user_strict"; function r(r) {
@@ -22,15 +23,18 @@ class CPF {
     }
 }
 
+// função para validar email
 function validarEmail(email) {
     const emailPattern = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
     return emailPattern.test(email);
 }
 
+// função para validar o formulario
 function validar() {
 
     let valido = true
 
+    // array dos htmls 
     const campos = [
 
         $("#nome"),
@@ -41,6 +45,7 @@ function validar() {
 
     ]
 
+    // passamos verificando se o input está vazio
     campos.forEach((elemento) => {
 
         if (elemento.val().trim() == "") {
@@ -56,6 +61,7 @@ function validar() {
 
     })
 
+    // validamos o campo email
     if(!validarEmail(campos[1].val())) {
 
         valido = false
@@ -67,6 +73,7 @@ function validar() {
 
     }
 
+    // validamos o campo CPF
     if(!new CPF().validaBoolean(campos[2].val())) {
 
         valido = false

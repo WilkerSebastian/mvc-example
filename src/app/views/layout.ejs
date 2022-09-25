@@ -37,11 +37,13 @@
     </header>
     <main class="container">
 
+        <!-- < %- body % > é o ponto em que todos os arquivos ejs terão seu conteudo subistutido nessa tag -->
         <%- body %> 
 
     </main>
     <footer class="bg-dark p-3 text-center">
 
+        <!-- < %=   % > é uma tag do ejs que pertime você usar javascript e imprimir os valores resultantes -->
         <span class="text-light">COPYRIGHT © <%= new Date().getFullYear() %> Wilker Sebastian Afonso Pereira</span>
 
     </footer>
